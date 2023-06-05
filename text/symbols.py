@@ -1,0 +1,28 @@
+""" from https://github.com/keithito/tacotron """
+
+'''
+Defines the set of symbols used in text input to the model.
+'''
+_pad        = '_'
+_punctuation = ';:,.!?¡¿—…"«»“” '
+
+_punctuation_zh = '；：，。！？-“”《》、 '
+_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+
+_numbers = '123450'
+_others = ''
+
+_letters_ipa = "ɑɐɒæɓʙβɔɕçɗɖðʤəɘɚɛɜɝɞɟʄɡɠɢʛɦɧħɥʜɨɪʝɭɬɫɮʟɱɯɰŋɳɲɴøɵɸθœɶʘɹɺɾɻʀʁɽʂʃʈʧʉʊʋⱱʌɣɤʍχʎʏʑʐʒʔʡʕʢǀǁǂǃˈˌːˑʼʴʰʱʲʷˠˤ˞↓↑→↗↘'̩'ᵻ"
+
+
+# Export all symbols:
+symbols = [_pad] + list(_punctuation) + list(_letters) + list(_letters_ipa)
+
+symbols_zh = [_pad] + list(_punctuation_zh) +  list(_letters) + list(_numbers)
+
+# Special symbol ids
+SPACE_ID = symbols.index(" ")
+
+if __name__=="__main__":
+    for i in symbols:
+        print("\""+i+"\"",end=",")

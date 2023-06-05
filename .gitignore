@@ -1,0 +1,6 @@
+*.wav
+__pycache__
+logs/
+.DS_Store
+monotonic_align/build
+monotonic_align/monotonic_align
